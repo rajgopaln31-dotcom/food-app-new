@@ -1,0 +1,59 @@
+/* Styles for classes that we use in the components (className="...") */
+
+/* Horizontal row that scrolls inside itself (categories) without a visible scrollbar */
+.hide-scrollbar {
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Promotional banner on the Home page */
+.banner {
+  position: relative;
+  min-height: 190px;
+  border-radius: 16px;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
+}
+.banner-content {
+  position: relative;
+  padding: 24px;
+  max-width: 70%;
+}
+
+/* Cards lift a little when the mouse is over them */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Food and restaurant pictures */
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text that is cut after 2 lines with "..." */
+.clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
